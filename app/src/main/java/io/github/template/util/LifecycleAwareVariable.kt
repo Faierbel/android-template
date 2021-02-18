@@ -1,5 +1,7 @@
 package io.github.template.util
 
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
@@ -24,7 +26,9 @@ class LifecycleAwareVariable<T : Any> : ReadWriteProperty<Fragment, T>, Lifecycl
     @Suppress("unused")
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun onDestroyView() {
-        _value = null
+        Handler(Looper.getMainLooper()).post {
+            _value = null
+        }
     }
 }
 

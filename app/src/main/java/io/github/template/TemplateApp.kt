@@ -6,7 +6,7 @@ import io.github.template.util.DebugLogTree
 import timber.log.Timber
 
 @HiltAndroidApp
-class SmartDnsApplication : Application() {
+class TemplateApp : Application() {
 
     override fun onCreate() {
         super.onCreate()

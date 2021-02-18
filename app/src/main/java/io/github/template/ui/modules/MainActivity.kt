@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import com.github.template.R
-import com.github.template.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
+import io.github.template.R
+import io.github.template.databinding.ActivityMainBinding
 import io.github.template.util.hideSoftInput
 import io.github.template.util.navigateSafe
 
