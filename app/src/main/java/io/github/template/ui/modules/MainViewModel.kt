@@ -1,7 +1,9 @@
 package io.github.template.ui.modules
 
-import androidx.hilt.lifecycle.ViewModelInject
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.github.template.ui.base.BaseViewModel
+import javax.inject.Inject
 
-class MainViewModel @ViewModelInject constructor() : BaseViewModel() {
+@HiltViewModel
+class MainViewModel @Inject constructor() : BaseViewModel() {
 }
