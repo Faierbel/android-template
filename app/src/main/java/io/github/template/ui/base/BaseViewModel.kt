@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.navigation.NavDirections
 import io.github.template.util.LiveEvent
 import io.github.template.util.toLiveData
+import timber.log.Timber
 
 abstract class BaseViewModel : ViewModel() {
 
@@ -13,5 +14,9 @@ abstract class BaseViewModel : ViewModel() {
 
     protected fun navigateTo(directions: NavDirections) {
         _navCommand.value = directions
+    }
+
+    protected open fun processError(error: Throwable) {
+        Timber.e(error)
     }
 }
