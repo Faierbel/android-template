@@ -5,7 +5,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import dagger.hilt.android.AndroidEntryPoint
 import io.github.template.R
 import io.github.template.databinding.ActivityMainBinding
@@ -24,7 +24,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        navController = findNavController(R.id.main_nav_graph)
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.main_nav_host) as NavHostFragment
+        navController = navHostFragment.navController
 
         initializeNavController()
     }
