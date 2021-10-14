@@ -40,5 +40,4 @@ abstract class BaseFragment<B : ViewDataBinding>(@LayoutRes private val layoutRe
             findNavController().navigateSafe(it)
         }
     }
-
 }

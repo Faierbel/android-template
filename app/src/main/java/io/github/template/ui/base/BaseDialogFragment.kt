@@ -40,4 +40,3 @@ abstract class BaseDialogFragment<B : ViewDataBinding>(@LayoutRes private val la
         }
     }
 }
-
