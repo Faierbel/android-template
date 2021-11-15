@@ -15,7 +15,7 @@ import io.github.template.util.navigateSafe
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    val viewModel: MainViewModel by viewModels()
+    private val viewModel: MainViewModel by viewModels()
 
     lateinit var binding: ActivityMainBinding
 
